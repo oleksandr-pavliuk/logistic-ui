@@ -23,12 +23,12 @@ const reviews = [
   { fullName: 'Ігор Сидоренко', review: 'Все супер, але є нюанси.', stars: 3, date: '05.03.2024' }
 ];
 
-const news = [
-  { fullName: 'Анна Іваненко', review: 'Дуже задоволена сервісом!', stars: 5, date: '12.03.2024' },
-  { fullName: 'Максим Петров', review: 'Швидко і якісно!', stars: 4, date: '10.03.2024' },
-  { fullName: 'Олена Коваленко', review: 'Чудовий досвід, рекомендую!', stars: 5, date: '08.03.2024' },
-  { fullName: 'Ігор Сидоренко', review: 'Все супер, але є нюанси.', stars: 3, date: '05.03.2024' }
-];
+// const news = [
+//   { fullName: 'Анна Іваненко', review: 'Дуже задоволена сервісом!', stars: 5, date: '12.03.2024' },
+//   { fullName: 'Максим Петров', review: 'Швидко і якісно!', stars: 4, date: '10.03.2024' },
+//   { fullName: 'Олена Коваленко', review: 'Чудовий досвід, рекомендую!', stars: 5, date: '08.03.2024' },
+//   { fullName: 'Ігор Сидоренко', review: 'Все супер, але є нюанси.', stars: 3, date: '05.03.2024' }
+// ];
 
 export default function Home() {
   return (

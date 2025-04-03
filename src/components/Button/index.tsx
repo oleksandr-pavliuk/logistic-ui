@@ -8,6 +8,7 @@ interface ButtonProps {
   rightIcon?: ReactNode;
   children: ReactNode;
   href?: string;
+  block?: boolean;
   type?: 'primary' | 'secondary' | 'ghost';
   onClick?: () => void
 }
@@ -17,13 +18,14 @@ export default function Button({
   leftIcon,
   rightIcon,
   type,
+  block,
   children,
   onClick,
 }: ButtonProps) {
   if (onClick) {
     return (
       <button
-        className={classNames(styles.btn, type && styles[`btn_${type}`])}
+        className={classNames(styles.btn, block && styles.btn__block, type && styles[`btn_${type}`])}
         onClick={onClick}
       >
         {leftIcon && <span className={styles.leftIcon}>{leftIcon}</span>}
@@ -34,7 +36,7 @@ export default function Button({
   }
 
   return (
-    <Link href={href ?? '#'} className={classNames(styles.btn, type && styles[`btn_${type}`])}>
+    <Link href={href ?? '#'} className={classNames(styles.btn, block && styles.btn__block, type && styles[`btn_${type}`])}>
       {leftIcon && <span className={styles.leftIcon}>{leftIcon}</span>}
       <span>{children}</span>
       {rightIcon && <span className={styles.rightIcon}>{rightIcon}</span>}

@@ -227,7 +227,7 @@ const Dashboard = () => {
               </div>
 
               <div className={classNames(styles.modal_footer)}>
-                <Button type='primary' onClick={handleAdd}>Додати</Button>
+                <Button type='primary' block onClick={handleAdd}>Додати</Button>
               </div>
             </div>
           </div>
@@ -271,7 +271,7 @@ const Dashboard = () => {
               </div>
 
               <div className={classNames(styles.modal_footer)}>
-                <Button type='primary' onClick={handleEditSave}>Зберегти</Button>
+                <Button type='primary' block onClick={handleEditSave}>Зберегти</Button>
               </div>
             </div>
           </div>

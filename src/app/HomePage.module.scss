@@ -1,0 +1,165 @@
+@use '@/assets/scss/variables.scss' as *;
+@use '@/assets/scss/typography.scss' as *;
+
+.header {
+  width: 100%;
+  display: flex;
+  padding-top: 56px;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    // justify-content: center;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+
+    p {
+      max-width: 680px;
+      color: #A0BDC0;
+      text-align: center;
+      font-family: 'Inter';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__image {
+    background-image: url('../assets/images/header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+  }
+}
+
+.section_about {
+  padding-block: 64px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 56px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    &__title {
+      flex: 1;
+      width: 100%;
+    }
+
+    &__content {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__stats {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  &__card {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+  
+    h4 {
+      color: $primary-color;
+      font-family: "Dela Gothic One";
+      font-size: 32px;
+      font-weight: 400;
+    }
+  
+    p {
+      color: #FFF;
+      font-family: 'Inter';
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+
+
+
+}
+
+.section_cta {
+  padding-block: 32px;
+}
+
+.section_reviews {
+  padding-block: 64px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  &__info {
+    flex: 1;
+    width: 100%;
+  }
+
+  &__content {
+    flex: 1;
+    width: 100%;
+
+    &__cards{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    
+  }
+}
+
+.section_news {
+  padding-block: 64px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  &__info {
+    flex: 1;
+    width: 100%;
+  }
+
+  &__content {
+    flex: 1;
+    width: 100%;
+
+    &__cards{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    
+  }
+}

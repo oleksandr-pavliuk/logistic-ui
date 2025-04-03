@@ -1,0 +1,84 @@
+@use '@/assets/scss/typography.scss' as *;
+@use '@/assets/scss/variables.scss' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  padding-inline: 32px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container__fluid {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 0;
+}
+
+body {
+  background-color: $background-color;
+  color: white;
+  font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  color: $primary-color;
+}
+
+h1 {
+  color: $primary-color;
+  text-align: center;
+  font-family: "Dela Gothic One";
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $primary-color;
+  font-family: "Dela Gothic One";
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  color: $text-color;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+input, select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 16px;
+  color: white
+}
+
+select option {
+  background-color: #333;
+  color: #fff;
+}

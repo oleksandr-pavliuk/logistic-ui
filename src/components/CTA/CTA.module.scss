@@ -1,0 +1,38 @@
+.cta {
+  display: flex;
+  padding: 64px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex: 1 0 0;
+  background-color: rgba(255, 255, 255, 0.05);
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  &__title {
+    max-width: 800px;
+    width: 100%;
+    color: #F9881E;
+    text-align: center;
+    // font-family: "Dela Gothic One";
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    max-width: 500px;
+    color: #A0BDC0;
+    text-align: center;
+    // font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

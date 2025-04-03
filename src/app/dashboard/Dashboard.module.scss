@@ -1,0 +1,165 @@
+@use '@/assets/scss/variables.scss' as *;
+
+.navbar {
+  padding-inline: 24px;
+  padding-block: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.wrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  &_actions {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex: 1;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: right;
+  z-index: 9999;
+
+  h3 {
+    color: white;
+  }
+
+  &__open {
+    transform: translateX(0);
+  }
+
+  &_header {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    
+    h3 {
+      flex: 1;
+    }
+  }
+
+  &_body {
+    padding-inline: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    height: auto;
+  }
+
+  &_footer {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    
+    .button {
+      flex: 1;
+    }
+  }
+
+  &__add, &__details, &__edit {
+    
+  }
+  
+  &_content {
+    background-color: $background-color;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+}
+
+.button {
+  background-color: $primary-color;
+  color: #121212;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+  
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+// analytics
+.analytics {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 20px;
+  gap: 16px;
+  width: 100%;
+  
+  &_card {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    flex: 1;
+    text-align: center;
+  
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      color: $primary-color;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+
+  th, td {
+    padding-inline: 16px;
+    padding-block: 8px;
+  }
+
+  &_action {
+
+    &_head {
+      text-align: right;
+    }
+
+    &_row {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: flex-end;
+    }
+  }
+}

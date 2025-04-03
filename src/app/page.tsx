@@ -86,7 +86,7 @@ export default function Home() {
                     <ReviewCard key={index} {...reviews} />
                   ))}
                 </div>
-                <Button>View More</Button>
+                {/* <Button type='secondary'>View More</Button> */}
               </div>
 
             </div>

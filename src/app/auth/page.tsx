@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import styles from './AuthPage.module.scss';
 import classNames from "classnames";
 import { useRouter } from 'next/navigation';
+import Link from "next/link";
+import Button from "@/components/Button";
 
 const Auth = () => {
   const [password, setPassword] = useState('');
@@ -23,11 +25,8 @@ const Auth = () => {
 
   return (
     <>
-      <div className={classNames(styles.navbar)}>
-        <a href="/">Logo</a>
-      </div>
-      
-      <div className={classNames(styles.wrapper)}>
+    <div className={classNames(styles.wrapper)}>
+      <div className={classNames(styles.form)}>
         <h2>Вход</h2>
         <input
           type="password"
@@ -35,9 +34,12 @@ const Auth = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Введите пароль"
         />
-        <button className={classNames(styles.button)} onClick={handleLogin}>Login</button>
+        <Button type="primary" onClick={handleLogin}>Login</Button>
+        <Button type="ghost" link="/">Back to home</Button>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </div>
+    </div>
+      
     </>
   );
 };

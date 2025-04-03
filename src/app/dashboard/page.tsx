@@ -5,6 +5,7 @@ import styles from './Dashboard.module.scss';
 import classNames from "classnames";
 import { shipmentData } from '@/assets/data/data';
 import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
 const STATUS_OPTIONS = ["Очікується", "В дорозі", "Доставлено"];
 
@@ -107,10 +108,10 @@ const Dashboard = () => {
   return (
     <>
       <div className={classNames(styles.navbar)}>
-        <a href="/">Logo</a>
-        <div>
+        <Link href="/dashboard" className={classNames(styles.logo)}>Logistico</Link>
+        <div className={classNames(styles.navbar_actions)}>
           <p>admin</p>
-          <button onClick={handleLogout}>Logout</button>
+          <button className={classNames(styles.button)} onClick={handleLogout}>Logout</button>
         </div>
       </div>
 

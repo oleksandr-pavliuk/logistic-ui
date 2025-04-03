@@ -1,3 +1,5 @@
+@use '@/assets/scss/variables.scss' as *;
+
 .btn {
   display: flex;
   justify-content: center;
@@ -6,4 +8,24 @@
   text-decoration: none;
   background-color: transparent;
   border-radius: 0;
+  padding: 16px 32px;
+  cursor: pointer;
+
+  &_primary {
+    background-color: $primary-color;
+    font-weight: 700;
+    font-size: 16px;
+    color: #121212;
+  }
+
+  &_secondary {
+    border: 1px solid $border-color;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &_ghost {
+    font-weight: 700;
+    font-size: 16px;
+  }
 }

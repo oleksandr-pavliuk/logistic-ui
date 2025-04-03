@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { shipmentData } from '@/assets/data/data';
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
+import Button from "@/components/Button";
 
 const STATUS_OPTIONS = ["Очікується", "В дорозі", "Доставлено"];
 
@@ -111,7 +112,7 @@ const Dashboard = () => {
         <Link href="/dashboard" className={classNames(styles.logo)}>Logistico</Link>
         <div className={classNames(styles.navbar_actions)}>
           <p>admin</p>
-          <button className={classNames(styles.button)} onClick={handleLogout}>Logout</button>
+          <Button type='primary' onClick={handleLogout}>Logout</Button>
         </div>
       </div>
 
@@ -165,7 +166,7 @@ const Dashboard = () => {
               onChange={(e) => setFilters({ ...filters, date: e.target.value })}
             />
           </div>
-          <button onClick={() => setIsAddVisible(true)} className={classNames(styles.button)} style={{ marginBottom: "10px" }}>До дати відправлення</button>
+          <Button type='primary' onClick={() => setIsAddVisible(true)}>Додати відправлення</Button>
         </div>
 
         <table className={classNames(styles.table)} style={{ width: "100%", borderCollapse: "collapse"}}>
@@ -197,8 +198,8 @@ const Dashboard = () => {
                 <td>{item.origin}</td>
                 <td>{item.destination}</td>
                 <td className={classNames(styles.table_action_row)}>
-                  <button className={classNames(styles.button)} onClick={() => handleDetails(item)}>Деталі</button>
-                  <button className={classNames(styles.button)} onClick={() => handleEdit(item)}>Редагувати</button>
+                  <Button type='primary' onClick={() => handleDetails(item)}>Деталі</Button>
+                  <Button type='primary' onClick={() => handleEdit(item)}>Редагувати</Button>
                 </td>
               </tr>
             ))}
@@ -210,7 +211,7 @@ const Dashboard = () => {
             <div className={classNames(styles.modal_content)}>
               <div className={classNames(styles.modal_header)}>
                 <h3>Додати нове відправлення</h3>
-                <button className={classNames(styles.button)} onClick={() => setIsAddVisible(false)} style={{ marginLeft: "10px" }}>Скасувати</button>
+                <Button type='primary' onClick={() => setIsAddVisible(false)}>Скасувати</Button>
               </div>
 
               <div className={classNames(styles.modal_body)}>
@@ -226,7 +227,7 @@ const Dashboard = () => {
               </div>
 
               <div className={classNames(styles.modal_footer)}>
-                <button className={classNames(styles.button)} onClick={handleAdd}>Додати</button>
+                <Button type='primary' onClick={handleAdd}>Додати</Button>
               </div>
             </div>
           </div>
@@ -238,7 +239,7 @@ const Dashboard = () => {
             <div className={classNames(styles.modal_content)}>
               <div className={classNames(styles.modal_header)}>
                 <h3>Редагувати відправлення</h3>
-                <button className={classNames(styles.button)} onClick={() => setIsEditVisible(false)}>Закрити</button>
+                <Button type='primary' onClick={() => setIsEditVisible(false)}>Закрити</Button>
               </div>
 
               <div className={classNames(styles.modal_body)}>
@@ -270,7 +271,7 @@ const Dashboard = () => {
               </div>
 
               <div className={classNames(styles.modal_footer)}>
-                <button className={classNames(styles.button)} onClick={handleEditSave}>Зберегти</button>
+                <Button type='primary' onClick={handleEditSave}>Зберегти</Button>
               </div>
             </div>
           </div>
@@ -281,7 +282,7 @@ const Dashboard = () => {
             <div className={classNames(styles.modal_content)}>
               <div className={classNames(styles.modal_header)}>
                 <h3>Деталі відправлення</h3>
-                <button className={classNames(styles.button)} onClick={() => setIsDetailsVisible(false)}>Закрити</button>
+                <Button type='primary' onClick={() => setIsDetailsVisible(false)}>Закрити</Button>
               </div>
 
               <div className={classNames(styles.modal_body)}>

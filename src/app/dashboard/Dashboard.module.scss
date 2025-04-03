@@ -96,19 +96,6 @@
   
 }
 
-.button {
-  background-color: $primary-color;
-  color: #121212;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 14px;
-  
-  &:hover {
-    background-color: $primary-color;
-  }
-}
-
 // analytics
 .analytics {
   display: flex;

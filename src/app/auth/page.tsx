@@ -35,7 +35,7 @@ const Auth = () => {
           placeholder="Введите пароль"
         />
         <Button type="primary" onClick={handleLogin}>Login</Button>
-        <Button type="ghost" link="/">Back to home</Button>
+        <Button type="ghost" href="/">Back to home</Button>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function CTA() {
         <h2 className={classNames(styles.cta__title)}>Доставляємо вантаж в будь яку точку світу</h2>
         <p className={classNames(styles.cta__description)}>Lorem ipsum dolor sit amet consectetur. Vitae tellus facilisi placerat non in quis</p>
       </div>
-      <Button type='primary'>Замовити послугу</Button>
+      <Button type='primary' href='mailto:7285358@stud.kai.edu.ua'>Замовити послугу</Button>
     </div>
   )
 }

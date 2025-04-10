@@ -9,7 +9,7 @@ interface ButtonProps {
   children: ReactNode;
   href?: string;
   block?: boolean;
-  type?: 'primary' | 'secondary' | 'ghost';
+  type?: 'primary' | 'secondary' | 'ghost' | 'danger';
   onClick?: () => void
 }
 
